@@ -11,6 +11,9 @@ const config: Config = {
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
       },
+      screens: {
+        xs: "384px",
+      },
     },
   },
   plugins: [],
