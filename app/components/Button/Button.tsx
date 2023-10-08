@@ -24,7 +24,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         onClick={onClick}
         disabled={disabled}
         className={cn(
-          "w-full flex justify-center items-center gap-x-4 p-4 rounded-md duration-500 font-medium text-white bg-teal-700 hover:bg-teal-800 focus:outline focus:outline-2 focus:outline-teal-950",
+          "w-full flex justify-center items-center gap-x-4 px-4 py-3 rounded-md duration-500 font-medium text-white bg-teal-700 hover:bg-teal-800 focus:outline focus:outline-2 focus:outline-teal-950",
           className
         )}
       >

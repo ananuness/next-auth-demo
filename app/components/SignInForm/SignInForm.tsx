@@ -72,10 +72,10 @@ export const SignInForm = ({ providers }: SignInFormProps) => {
                     onClick={() => signIn(provider.id, { callbackUrl: "/" })}
                   >
                     {provider.id === "google" && (
-                      <Image src={googleLogo} alt="google" className="w-8" />
+                      <Image src={googleLogo} alt="google" className="w-6" />
                     )}
                     {provider.id === "github" && (
-                      <Image src={githubLogo} alt="github" className="w-8" />
+                      <Image src={githubLogo} alt="github" className="w-6" />
                     )}
                     {provider.name}
                   </Button>
