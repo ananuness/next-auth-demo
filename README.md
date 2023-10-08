@@ -1,12 +1,12 @@
 <div align="center">
-  <h1>Next Auth Demo</h1>
+  <h1>🔐 Next Auth Demo</h1>
   <p>Demonstração de uso do Next.js 13 com o NextAuth.js</p>
-  <a href="#testando-o-projeto">Testando o projeto</a> •
-  <a href="#configurando-o-projeto">Configurando o projeto</a> •
-  <a href="#explicando-os-arquivos">Explicando os arquivos</a>
+  <a href="#microscope-testando-o-projeto">Testando o projeto</a> •
+  <a href="#hammer_and_wrench-configurando-o-projeto">Configurando o projeto</a> •
+  <a href="#speaking_head-explicando-os-arquivos">Explicando os arquivos</a>
 </div>
 
-## Testando o projeto
+## :microscope: Testando o projeto
 
 Leve em consideração é que o foco dessa demo foi o NextAuth, por isso não foi
 integrado nenhum banco de dados à aplicação. Então, para testar o _sign-in_
@@ -22,7 +22,7 @@ sucesso:
 
 > Também podem ser encontrados no arquivo `app/api/**/options.ts`.
 
-## Configurando o projeto
+## :hammer_and_wrench: Configurando o projeto
 
 As únicas configurações necessárias serão criar um novo OAuth app no Github e no
 google cloud para preencher corretamente o arquivo `.env`.
@@ -59,7 +59,7 @@ Após isso:
 Por fim, se tudo deu certo, será possível visualizar sua _secret_ e o _client id_
 para salvar nas variáveis de ambiente.
 
-## Explicando os arquivos
+## :speaking_head: Explicando os arquivos
 
 #### `app/api/**/options.ts`
 
