@@ -6,6 +6,31 @@
   <a href="#speaking_head-explicando-os-arquivos">Explicando os arquivos</a>
 </div>
 
+## :mag: O que é NextAuth.js?
+
+O NextAuth.js, muito em breve Auth.js, é uma solução _open-source_ de
+autenticação segura e flexível, projetada para sincronizar com qualquer serviço
+OAuth, podendo ser configurado facilmente com provedores como Github, Google e
+outros. Além de suporte para login sem senha, _Two-factor authentication_ e
+personalização de fluxos de autenticação, ele é feito para evitar a necessidade
+de armazenar dados sensíveis, como a senha do usuário.
+
+O Auth.js tem uma [API _client-side_](https://next-auth.js.org/getting-started/client)
+que podemos utilizar para gerenciar sessões. Os dados retornados dos provedores
+de autenticação suportados, contém o _payload_ do usuário e isso pode ser usado
+para realizar um login com sucesso. A lib também provê o hook `useSession()`,
+que pode ser usado para checar o status de login do usuário.
+
+Além disso, o NextAuth fornece uma [REST API](https://next-auth.js.org/getting-started/rest-api)
+para lidar com os fluxos de autenticação, como o _sign-in_ em determinado
+_provider_, os callbacks desses providers e o sign out.
+
+> Algumas rotas da REST API foram utilizadas no projeto, como a `/api/auth/signin`
+> em `./app/page.tsx` para redirecionar para a página de sign-in, além da rota
+> `/api/auth/callback/:provider`, que pode ser vista nos prints das seções
+> [OAuth via Github](#oauth-via-github) e [OAuth via Google](#oauth-via-google),
+> na qual lida com as requisições de retorno do provider utilizado.
+
 ## :microscope: Testando o projeto
 
 Leve em consideração é que o foco dessa demo foi o NextAuth, por isso não foi
@@ -27,7 +52,7 @@ sucesso:
 As únicas configurações necessárias serão criar um novo OAuth app no Github e no
 google cloud para preencher corretamente o arquivo `.env`.
 
-### OAuth app via Github
+### OAuth via Github
 
 Para criar um novo OAuth app caso deseje testar a aplicação, é necessário ir em
 `Settings > Developer Settings > OAuth Apps > New OAuth App`, após isso, preencha
@@ -37,7 +62,7 @@ da seguinte maneira:
 
 Após isso, guarde o id e o secret informados.
 
-### OAuth via google
+### OAuth via Google
 
 Para criar as credenciais de autorização do Google, será necessário criar uma
 conta no [Google Cloud](https://console.cloud.google.com). Logo em seguida, caso
@@ -132,11 +157,17 @@ haverá o redirecionamento para a tela de _signin_.
 > logado, o redirecionamento era feito para `/signin`, e por não ter _matcher_ à
 > priori, _signin_ também estava protegida, ocorrendo o loop de redirecionamentos.
 
+<div align="end">
+  <a href="#-next-auth-demo">
+    ▴ voltar ao topo
+  </a>
+</div>
+
 <hr>
 
 <p align="center">
   Feito com 🖤 por
-  <a align="center" href="https://www.linkedin.com/in/ana-beatriz-nunes/">
+  <a href="https://www.linkedin.com/in/ana-beatriz-nunes/">
     Ana Beatriz Nunes
   </a>
 </p>
