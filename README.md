@@ -157,7 +157,7 @@ haverá o redirecionamento para a tela de _signin_.
 > logado, o redirecionamento era feito para `/signin`, e por não ter _matcher_ à
 > priori, _signin_ também estava protegida, ocorrendo o loop de redirecionamentos.
 
-<div align="end">
+<div align="right">
   <a href="#-next-auth-demo">
     ▴ voltar ao topo
   </a>
